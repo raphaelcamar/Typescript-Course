@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript</title>
+</head>
+<body>
+    
+    <script src="./compilador/compilador.js"></script>
+    <script src="introducao/basico.js"></script>
+    <script src="tipos/tipos.js"></script>
+    <script src="ecmascript/ecmascript.js"></script>
+    <script src="ecmascript/desafio/desafio.js"></script>
+    <script src="classes/classes.js"></script>
+    <script>
+        SystemJS.config({
+            baseUrl : '/modulos',
+            package : {
+                '/modulos': {
+                    defaultJSExtension : true
+                }
+            }
+        })
+
+        SystemJS.import('./modulos/modulos.js')
+    </script>
+</body>
+</html>
